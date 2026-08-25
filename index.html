@@ -1,0 +1,1196 @@
+
+<!DOCTYPE html>
+
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>MEGAPARTS.COM - Full Technical Performance Assessment</title>
+<style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>:root{--ink:#19212d;--muted:#657081;--line:#d9dee7;--soft:#f6f8fb;--navy:#1f2937;--accent:#2563eb;--red:#b91c1c;--amber:#b45309;--green:#047857;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eef2f6;color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55;font-size:15px}.page{max-width:1160px;margin:34px auto;background:#fff;border:1px solid #e5e9f0;border-radius:18px;box-shadow:0 20px 50px rgba(15,23,42,.08);overflow:hidden}.hero{padding:52px 62px 34px;background:linear-gradient(135deg,#111827,#273449);color:#fff}.hero .eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#cbd5e1;font-weight:700}.hero h1{margin:10px 0 12px;font-size:42px;line-height:1.08;letter-spacing:-.03em}.hero .sub{font-size:18px;max-width:850px;color:#dbe4ef}.content{padding:38px 62px 70px}nav#TOC{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:0 0 34px}nav#TOC:before{content:"Contents";display:block;font-weight:800;font-size:18px;margin-bottom:8px}nav#TOC ul{columns:2;column-gap:34px;margin:0;padding-left:18px}nav#TOC li{break-inside:avoid;margin:4px 0}nav#TOC a{color:#334155;text-decoration:none}nav#TOC a:hover{color:var(--accent)}h1,h2,h3,h4{color:var(--ink);letter-spacing:-.015em;scroll-margin-top:18px}h1{font-size:30px;margin:44px 0 14px;border-top:1px solid #e8ecf2;padding-top:30px}h1:first-of-type{border-top:0;padding-top:0}h2{font-size:22px;margin:28px 0 10px}h3{font-size:17px;margin:22px 0 8px}p{margin:0 0 12px}strong{font-weight:750}ul,ol{margin:8px 0 16px;padding-left:24px}li{margin:5px 0}table{border-collapse:separate;border-spacing:0;width:100%;margin:15px 0 26px;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.5px}thead th{background:var(--navy);color:#fff;font-weight:700;text-align:left;padding:11px 12px;border-right:1px solid #475569}thead th:last-child{border-right:0}tbody td{padding:10px 12px;border-top:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top}tbody td:last-child{border-right:0}tbody tr:nth-child(even){background:var(--soft)}blockquote{margin:18px 0;padding:14px 18px;border-left:4px solid var(--accent);background:#eff6ff;color:#334155;border-radius:0 10px 10px 0}a{color:#1d4ed8;text-decoration-thickness:.06em;text-underline-offset:.12em}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f1f5f9;padding:.1em .35em;border-radius:5px;font-size:.92em}.meta-card{display:grid;grid-template-columns:180px 1fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0 0 30px}.meta-card div{padding:10px 12px;border-bottom:1px solid var(--line)}.meta-card div:nth-last-child(-n+2){border-bottom:0}.meta-card .k{font-weight:700;background:#f8fafc}.callout{padding:16px 18px;background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;margin:18px 0}.footer-note{margin-top:42px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}@media(max-width:760px){body{font-size:14px}.page{margin:0;border:0;border-radius:0}.hero{padding:34px 22px 26px}.hero h1{font-size:31px}.hero .sub{font-size:16px}.content{padding:26px 20px 50px}nav#TOC ul{columns:1}h1{font-size:25px}h2{font-size:20px}table{display:block;overflow-x:auto;white-space:normal}.meta-card{grid-template-columns:1fr}.meta-card .k{border-bottom:0}.meta-card div{border-bottom:1px solid var(--line)!important}}
+@media print{body{background:#fff}.page{box-shadow:none;border:0;margin:0;max-width:none}.hero{background:#111827!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.content{padding:26px 36px}nav#TOC{break-inside:avoid}table{break-inside:auto}tr{break-inside:avoid}a{color:inherit;text-decoration:none}h1,h2,h3{break-after:avoid}}
+</style>
+<style>
+:root{
+  --mp-red:#f52222;
+  --mp-red-dark:#9a1111;
+  --mp-gradient:linear-gradient(180deg,#f52222 0%,#9a1111 100%);
+  --mp-ink:#171717;
+  --mp-muted:#666;
+  --mp-bg:#f7f7f7;
+  --mp-surface:#fff;
+  --mp-border:#e5e5e5;
+  --mp-critical-bg:#fff0f0;
+  --mp-critical:#b42318;
+}
+html{scroll-behavior:smooth}
+body{background:var(--mp-bg)!important;color:var(--mp-ink)!important}
+body:before{content:"";display:block;height:8px;background:var(--mp-gradient)}
+main,.page,.container{background:transparent}
+h1{color:#111!important;border-bottom:0!important}
+h1:first-of-type{background:var(--mp-gradient);color:#fff!important;padding:28px 30px;border-radius:18px;box-shadow:0 14px 30px rgba(154,17,17,.18);margin-top:18px}
+h2{color:var(--mp-red-dark)!important;border-left:5px solid var(--mp-red);padding-left:12px}
+h3{color:#7f1111!important}
+a{color:var(--mp-red-dark)!important;text-decoration-color:rgba(245,34,34,.35)}
+a:hover{color:var(--mp-red)!important}
+table{background:var(--mp-surface)!important;border-color:var(--mp-border)!important;box-shadow:0 4px 16px rgba(0,0,0,.035);border-radius:12px;overflow:hidden}
+th{background:var(--mp-gradient)!important;color:#fff!important;border-color:#b51919!important}
+td{border-color:var(--mp-border)!important}
+tr:nth-child(even) td{background:#fffafa!important}
+blockquote{border-left:4px solid var(--mp-red)!important;background:#fff7f7!important;color:#3f1d1d!important}
+code{background:#fff1f1!important;color:#8f1111!important}
+hr{border-color:#f0caca!important}
+nav#TOC,.toc{background:#fff!important;border:1px solid var(--mp-border)!important;border-top:5px solid var(--mp-red)!important;border-radius:14px;padding:18px 22px;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+nav#TOC a,.toc a{color:#6d1616!important}
+strong{color:#2a1111}
+/* status/pill-like emphasis where plain text includes priority labels */
+p,li{line-height:1.62}
+@media (max-width:760px){
+  h1:first-of-type{padding:22px 20px;border-radius:12px}
+  table{display:block;overflow-x:auto;white-space:normal}
+}
+@media print{
+  body{background:#fff!important}
+  body:before{height:5px}
+  h1:first-of-type{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body><div class="page"><header class="hero"><div class="eyebrow">MEGAPARTS.COM</div><h1>Full Technical Performance Assessment</h1><div class="sub">Current-state audit, technology review, root-cause analysis, and remediation guide</div></header><main class="content">
+<header id="title-block-header">
+<h1 class="title">MEGAPARTS.COM --- Full Technical Performance
+Assessment</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#executive-summary" id="toc-executive-summary">1. Executive
+Summary</a>
+<ul>
+<li><a href="#recommended-direction" id="toc-recommended-direction">Recommended direction</a></li>
+<li><a href="#target-outcome" id="toc-target-outcome">Target
+outcome</a></li>
+</ul></li>
+<li><a href="#scope-evidence-and-limitations" id="toc-scope-evidence-and-limitations">2. Scope, Evidence and
+Limitations</a>
+<ul>
+<li><a href="#limitations" id="toc-limitations">Limitations</a></li>
+</ul></li>
+<li><a href="#web-technology-assessment" id="toc-web-technology-assessment">3. Web Technology Assessment</a></li>
+<li><a href="#previous-vs-current-assessment" id="toc-previous-vs-current-assessment">4. Previous vs Current
+Assessment</a></li>
+<li><a href="#detailed-findings" id="toc-detailed-findings">5. Detailed
+Findings</a></li>
+<li><a href="#root-cause-model" id="toc-root-cause-model">6. Root-Cause
+Model</a></li>
+<li><a href="#how-to-fix-implementation-guide" id="toc-how-to-fix-implementation-guide">7. How-to-Fix: Implementation
+Guide</a>
+<ul>
+<li><a href="#rebuild-homepage-tab-rendering-p0" id="toc-rebuild-homepage-tab-rendering-p0">7.1 Rebuild homepage tab
+rendering (P0)</a></li>
+<li><a href="#reduce-homepage-product-density-p0" id="toc-reduce-homepage-product-density-p0">7.2 Reduce homepage product
+density (P0)</a></li>
+<li><a href="#simplify-product-card-markup-and-add-to-cart-p1" id="toc-simplify-product-card-markup-and-add-to-cart-p1">7.3 Simplify
+product-card markup and add-to-cart (P1)</a></li>
+<li><a href="#magento-frontend-asset-optimization-p1" id="toc-magento-frontend-asset-optimization-p1">7.4 Magento frontend
+asset optimization (P1)</a></li>
+<li><a href="#gtm-analytics-cleanup-p1" id="toc-gtm-analytics-cleanup-p1">7.5 GTM / analytics cleanup
+(P1)</a></li>
+<li><a href="#image-strategy-p1" id="toc-image-strategy-p1">7.6 Image
+strategy (P1)</a></li>
+<li><a href="#cache-cdn-infrastructure-validation-p1" id="toc-cache-cdn-infrastructure-validation-p1">7.7 Cache / CDN /
+infrastructure validation (P1)</a></li>
+</ul></li>
+<li><a href="#performance-measurement-plan" id="toc-performance-measurement-plan">8. Performance Measurement
+Plan</a>
+<ul>
+<li><a href="#recommended-lab-procedure" id="toc-recommended-lab-procedure">Recommended lab procedure</a></li>
+</ul></li>
+<li><a href="#prioritized-remediation-roadmap" id="toc-prioritized-remediation-roadmap">9. Prioritized Remediation
+Roadmap</a></li>
+<li><a href="#suggested-engineering-tickets" id="toc-suggested-engineering-tickets">10. Suggested Engineering
+Tickets</a></li>
+<li><a href="#expected-improvement" id="toc-expected-improvement">11.
+Expected Improvement</a></li>
+<li><a href="#acceptance-checklist" id="toc-acceptance-checklist">12.
+Acceptance Checklist</a></li>
+<li><a href="#references" id="toc-references">13. References</a></li>
+</ul>
+</nav>
+<table>
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Audit item</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Target</td>
+<td>https://www.megaparts.com/</td>
+</tr>
+<tr class="even">
+<td>Assessment date</td>
+<td>25 August 2026</td>
+</tr>
+<tr class="odd">
+<td>Primary platform</td>
+<td>Magento 2 / Magento Open Source or Adobe Commerce family (externally
+detected)</td>
+</tr>
+<tr class="even">
+<td>Previous baseline</td>
+<td>7,280+ DOM elements; 456 product links; ~2.3 MB rendered HTML;
+multiple tracking scripts</td>
+</tr>
+<tr class="odd">
+<td>Primary conclusion</td>
+<td>Structural storefront performance issue remains unresolved: too much
+catalog/UI markup is delivered and rendered upfront.</td>
+</tr>
+</tbody>
+</table>
+<p>Prepared as an implementation-oriented technical assessment. External
+observation only; no server, repository, Magento Admin, APM, CDN, or
+database access was available.</p>
+<h1 id="executive-summary">1. Executive Summary</h1>
+<p>The current Megaparts homepage still exhibits the same structural
+pattern identified in the previous audit: large product groups, multiple
+model-year tabs, and repeated purchase controls are present in the
+initial page document instead of being loaded only when needed. This
+means the main performance problem is architectural rather than a single
+image, hosting, or minification issue.</p>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Area</strong></th>
+<th><strong>Assessment</strong></th>
+<th><strong>Priority</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Homepage DOM / markup</td>
+<td>Excessive catalog and inactive-tab content remains present in the
+initial document.</td>
+<td>P0 – Critical</td>
+</tr>
+<tr class="even">
+<td>Catalog rendering strategy</td>
+<td>Multiple year/model product sets are pre-rendered even when not
+initially visible.</td>
+<td>P0 – Critical</td>
+</tr>
+<tr class="odd">
+<td>Initial HTML payload</td>
+<td>Previous ~2.3 MB baseline remains directionally credible; current
+public crawl confirms the same high-volume rendering pattern, but raw
+byte size was not independently re-measured in this pass.</td>
+<td>P0 – Critical</td>
+</tr>
+<tr class="even">
+<td>Tracking / third-party</td>
+<td>Two Google Tag Manager iframe references are visible at the top of
+the current crawl; duplicate initialization should be verified.</td>
+<td>P1 – High</td>
+</tr>
+<tr class="odd">
+<td>Frontend asset strategy</td>
+<td>Magento 2 requires deliberate JS/CSS optimization; generic merging
+is not a sufficient fix.</td>
+<td>P1 – High</td>
+</tr>
+<tr class="even">
+<td>Caching / delivery</td>
+<td>Must be validated inside infrastructure. Production mode, full-page
+cache/Varnish, static asset caching and CDN should be confirmed.</td>
+<td>P1 – High</td>
+</tr>
+<tr class="odd">
+<td>Measurement governance</td>
+<td>Performance budget and repeatable Lighthouse/CrUX monitoring are not
+evident from external inspection.</td>
+<td>P1 – High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-direction">Recommended direction</h2>
+<ul>
+<li><p>Stop rendering inactive product tabs and large product
+collections into the initial DOM.</p></li>
+<li><p>Render only the first visible product set (for example 8–12
+cards) and fetch additional tabs/sections on interaction or
+near-viewport.</p></li>
+<li><p>Reduce per-card markup and avoid creating a full add-to-cart
+form/input structure for every hidden product if a delegated action can
+be used.</p></li>
+<li><p>Treat Magento JavaScript/CSS optimization as a second layer after
+DOM/content architecture is fixed.</p></li>
+<li><p>Audit GTM/analytics initialization and remove duplicate or
+unnecessary tags.</p></li>
+<li><p>Establish measurable performance budgets and regression checks
+before and after every release.</p></li>
+</ul>
+<h2 id="target-outcome">Target outcome</h2>
+<table>
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Metric / Budget</strong></th>
+<th><strong>Suggested target</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Initial DOM elements</td>
+<td>Prefer &lt; 1,500–2,000 for homepage; avoid thousands of hidden
+product nodes</td>
+</tr>
+<tr class="even">
+<td>Initial product cards</td>
+<td>8–12 per visible section; do not preload all inactive tabs</td>
+</tr>
+<tr class="odd">
+<td>Initial HTML document</td>
+<td>Aim &lt; 300–500 KB uncompressed where practical; significantly
+below previous ~2.3 MB</td>
+</tr>
+<tr class="even">
+<td>LCP</td>
+<td>≤ 2.5 s at 75th percentile</td>
+</tr>
+<tr class="odd">
+<td>INP</td>
+<td>≤ 200 ms at 75th percentile</td>
+</tr>
+<tr class="even">
+<td>CLS</td>
+<td>≤ 0.1 at 75th percentile</td>
+</tr>
+<tr class="odd">
+<td>Third-party JS</td>
+<td>Only required vendors; no duplicate tag-manager/analytics
+initialization</td>
+</tr>
+<tr class="even">
+<td>Performance regression</td>
+<td>Fail CI/release if agreed budgets are exceeded</td>
+</tr>
+</tbody>
+</table>
+<h1 id="scope-evidence-and-limitations">2. Scope, Evidence and
+Limitations</h1>
+<p>This assessment combines current public crawl evidence, the previous
+measured baseline supplied by the project team, external technology
+detection, and current Adobe/Google performance guidance.</p>
+<table>
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Evidence source</strong></th>
+<th><strong>What it establishes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Current Megaparts homepage crawl (25 Aug 2026)</td>
+<td>Homepage content structure, product/tabs appearing in initial HTML,
+duplicate GTM iframe references, page length (1,510 parsed lines in the
+crawler).</td>
+</tr>
+<tr class="even">
+<td>BuiltWith technology trend data</td>
+<td>Megaparts.com is detected as a Magento 2 site.</td>
+</tr>
+<tr class="odd">
+<td>Previous project baseline</td>
+<td>7,280+ DOM elements, 456 product links, ~2.3 MB rendered HTML,
+multiple tracking scripts.</td>
+</tr>
+<tr class="even">
+<td>Adobe Commerce performance documentation</td>
+<td>Magento-specific guidance for minification, advanced JS bundling,
+HTTP/2, and production optimization.</td>
+</tr>
+<tr class="odd">
+<td>Google web.dev / Chrome Lighthouse documentation</td>
+<td>Impact of large DOMs and third-party JS; Core Web Vitals and
+measurement approach.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li><p>No authenticated access to Magento Admin, source code, deployment
+configuration, database, Redis/Varnish, CDN, server logs, APM, or GTM
+workspace.</p></li>
+<li><p>The public crawler does not expose a one-to-one raw
+transfer-size/DOM-node metric equivalent to the previous browser
+measurement, so previous numeric values are preserved as baseline rather
+than represented as newly measured values.</p></li>
+<li><p>Core Web Vitals field data and a stable lab Lighthouse run were
+not available in this external pass; they should be captured during
+implementation using Chrome DevTools/PageSpeed Insights and real-user
+monitoring.</p></li>
+</ul>
+<h1 id="web-technology-assessment">3. Web Technology Assessment</h1>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Layer</strong></th>
+<th><strong>Current assessment</strong></th>
+<th><strong>Confidence</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>E-commerce / CMS</td>
+<td>Magento 2</td>
+<td>Confirmed by external technology detection</td>
+</tr>
+<tr class="even">
+<td>Rendering model</td>
+<td>Server-generated catalog markup with JavaScript-enhanced
+interactions</td>
+<td>High – visible in current HTML</td>
+</tr>
+<tr class="odd">
+<td>Frontend framework/runtime</td>
+<td>Magento standard frontend commonly uses RequireJS, jQuery and
+Knockout; exact theme/runtime versions require asset inspection</td>
+<td>Inferred, not version-confirmed</td>
+</tr>
+<tr class="even">
+<td>Tag management</td>
+<td>Google Tag Manager is present; two GTM iframe references are
+visible</td>
+<td>Confirmed presence; duplication requires container-level
+validation</td>
+</tr>
+<tr class="odd">
+<td>Analytics / marketing tags</td>
+<td>Not fully enumerable from crawl; must be audited in GTM and Network
+panel</td>
+<td>Needs verification</td>
+</tr>
+<tr class="even">
+<td>Caching/CDN</td>
+<td>Not reliably determined from crawl</td>
+<td>Needs infrastructure validation</td>
+</tr>
+<tr class="odd">
+<td>Image pipeline</td>
+<td>Large catalog image footprint is likely material; exact
+formats/variants/lazy-loading behavior require Network/DOM
+inspection</td>
+<td>Needs browser validation</td>
+</tr>
+<tr class="even">
+<td>HTTP protocol / compression</td>
+<td>Not confirmed in this assessment</td>
+<td>Needs header/browser validation</td>
+</tr>
+</tbody>
+</table>
+<p>Important distinction: Magento 2 itself is not the root cause. The
+problem is how the homepage has been composed on top of Magento: a
+storefront can be fast on Magento when the initial page renders a
+bounded amount of content, assets are page-appropriate, caching is
+correctly configured, and third-party code is controlled.</p>
+<h1 id="previous-vs-current-assessment">4. Previous vs Current
+Assessment</h1>
+<table>
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Finding</strong></th>
+<th><strong>Previous baseline</strong></th>
+<th><strong>Current evidence</strong></th>
+<th><strong>Status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DOM size</td>
+<td>7,280+ DOM elements</td>
+<td>Current crawl still contains many complete product sets for inactive
+year tabs and continues for 1,510 parsed lines. Exact node count not
+re-measured.</td>
+<td>Red – structurally unresolved</td>
+</tr>
+<tr class="even">
+<td>Product links</td>
+<td>456 product links</td>
+<td>Current document includes extensive product anchors across GIORNO+,
+LEAD, PCX and additional sections rather than only visible
+products.</td>
+<td>Red – still high</td>
+</tr>
+<tr class="odd">
+<td>Rendered HTML</td>
+<td>~2.3 MB</td>
+<td>Current crawl confirms the same content-delivery pattern. Exact byte
+size not re-measured externally.</td>
+<td>Red – root cause remains</td>
+</tr>
+<tr class="even">
+<td>Inactive tabs</td>
+<td>Rendered in advance</td>
+<td>Products for multiple years (e.g., GIORNO+ 2024/2025/2026; LEAD
+2022/2025/2026; PCX 2021/2022) coexist in initial document.</td>
+<td>Red – confirmed</td>
+</tr>
+<tr class="odd">
+<td>Tracking</td>
+<td>Multiple scripts / duplication risk</td>
+<td>Two GTM iframe references appear at the top of the current
+crawl.</td>
+<td>Amber/Red – audit required</td>
+</tr>
+</tbody>
+</table>
+<h1 id="detailed-findings">5. Detailed Findings</h1>
+<p>F01 — Excessive initial DOM / page structure</p>
+<p><strong>Critical / P0</strong> — The homepage continues to ship a
+very large amount of catalog markup. A large DOM increases browser
+memory use and makes style recalculation, layout, paint, and interaction
+work more expensive.</p>
+<p><strong>Evidence / rationale:</strong> Current crawl exposes many
+product nodes consecutively from multiple product families.</p>
+<ul>
+<li><p>Google web.dev documents that large DOMs can increase rendering
+work and contribute to poor interaction responsiveness/INP.</p></li>
+</ul>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Rebuild homepage sections around a bounded initial
+render.</p></li>
+<li><p>Remove hidden/inactive catalog markup from initial HTML.</p></li>
+<li><p>Set an explicit DOM budget and track it in
+Lighthouse/CI.</p></li>
+</ul>
+<p>F02 — Inactive model-year tabs are pre-rendered</p>
+<p><strong>Critical / P0</strong> — The current HTML contains products
+from multiple years under tabbed groups. Hiding content with CSS does
+not remove its network, HTML parsing, DOM, style, and memory cost.</p>
+<p><strong>Evidence / rationale:</strong> GIORNO+ 2024, 2025 and 2026
+products are all present.</p>
+<ul>
+<li><p>LEAD 2022, 2025 and 2026 products are all present.</p></li>
+<li><p>PCX 2021 and 2022 products are also present in the same initial
+document.</p></li>
+</ul>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>SSR only the default active tab.</p></li>
+<li><p>When another year is selected, fetch that dataset/HTML fragment
+asynchronously and cache it.</p></li>
+<li><p>Optionally prefetch the next most likely tab after load/idle, not
+during the critical path.</p></li>
+</ul>
+<p>F03 — Too many product cards are delivered on the homepage</p>
+<p><strong>Critical / P0</strong> — A homepage should help users
+discover categories and products, but it should not behave like multiple
+full category pages concatenated together.</p>
+<p><strong>Evidence / rationale:</strong> Repeated product titles,
+prices, inputs and add-to-cart controls dominate the initial
+document.</p>
+<ul>
+<li><p>Previous baseline found 456 product links.</p></li>
+</ul>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Cap product cards per section (typically 8–12).</p></li>
+<li><p>Add 'View all' to category/model pages.</p></li>
+<li><p>Use horizontal carousel/virtualized list only if UX requires more
+choices; do not retain off-screen cards in the DOM
+indefinitely.</p></li>
+</ul>
+<p>F04 — Repeated purchase controls amplify markup and interaction
+cost</p>
+<p><strong>High / P1</strong> — Each product row/card includes input
+controls and add-to-cart behavior. Repeating full form structures
+hundreds of times compounds DOM size and event initialization.</p>
+<p><strong>Evidence / rationale:</strong> Current crawl repeatedly shows
+two inputs plus an add-to-cart control for product entries.</p>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Use minimal card markup.</p></li>
+<li><p>Use event delegation from the product-grid container.</p></li>
+<li><p>Create/initialize quantity or configurable-product UI only on
+user intent where possible.</p></li>
+<li><p>Preserve CSRF/form-key and Magento cart behavior while reducing
+duplicated DOM.</p></li>
+</ul>
+<p>F05 — Third-party / GTM duplication risk</p>
+<p><strong>High / P1</strong> — The current page crawl exposes two
+Google Tag Manager iframe references. This does not by itself prove
+duplicate event firing, but it is a strong signal that the tag stack
+needs inspection.</p>
+<p><strong>Evidence / rationale:</strong> Two googletagmanager.com
+iframe references appear near the start of the document.</p>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Inventory all GTM containers/snippets in theme, CMS blocks,
+modules and consent tools.</p></li>
+<li><p>Confirm only the intended container initializes.</p></li>
+<li><p>In GTM Preview/Tag Assistant, verify each page_view/ecommerce
+event fires exactly once.</p></li>
+<li><p>Remove obsolete pixels and tags; delay non-critical marketing
+tags until consent/interaction where appropriate.</p></li>
+</ul>
+<p>F06 — JavaScript delivery must be Magento-aware</p>
+<p><strong>High / P1</strong> — Magento's frontend is modular. Simply
+merging JavaScript into one large file can make first-load performance
+worse and Adobe explicitly warns against deprecated JS/CSS merging
+patterns.</p>
+<p><strong>Evidence / rationale:</strong> Adobe recommends
+advanced/page-type bundling strategies and minification.</p>
+<ul>
+<li><p>Adobe notes built-in bundling can still load bundles that a page
+does not need.</p></li>
+</ul>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Run production mode and static-content deployment
+correctly.</p></li>
+<li><p>Minify JS/CSS/HTML.</p></li>
+<li><p>Do not rely on deprecated JS/CSS merge.</p></li>
+<li><p>Use page-type/purpose-specific bundles or a modern frontend build
+strategy.</p></li>
+<li><p>Defer non-critical and third-party JS.</p></li>
+</ul>
+<p>F07 — Image loading should be aligned to viewport priority</p>
+<p><strong>High / P1</strong> — Catalog-heavy pages often waste
+bandwidth by downloading below-the-fold product images too early. The
+homepage should prioritize the hero/LCP image and defer the rest.</p>
+<p><strong>Evidence / rationale:</strong> Exact image request
+count/formats were not available from the public crawl; this is a
+required browser-level verification.</p>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Use responsive srcset/sizes.</p></li>
+<li><p>Prefer WebP/AVIF where supported.</p></li>
+<li><p>Set explicit width/height to prevent layout shifts.</p></li>
+<li><p>Use loading='lazy' for below-the-fold product images.</p></li>
+<li><p>Do not lazy-load the LCP/hero image; preload/fetchpriority='high'
+only when justified.</p></li>
+</ul>
+<p>F08 — Full-page caching and delivery configuration require
+validation</p>
+<p><strong>High / P1</strong> — Magento performance depends heavily on
+correct production caching and delivery. A structurally smaller page
+should then be served through appropriate FPC/Varnish/CDN layers.</p>
+<p><strong>Evidence / rationale:</strong> External crawl cannot confirm
+Magento mode, Varnish, Redis, CDN cache status or origin TTFB.</p>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Verify production mode.</p></li>
+<li><p>Verify Magento caches are enabled.</p></li>
+<li><p>Use Varnish/full-page cache per supported architecture.</p></li>
+<li><p>Use Redis for cache/session where appropriate.</p></li>
+<li><p>Set immutable/versioned static-asset caching.</p></li>
+<li><p>Place static/media assets behind CDN and verify compression
+(Brotli/Gzip) and HTTP/2 or HTTP/3.</p></li>
+</ul>
+<p>F09 — No explicit performance budget / regression gate</p>
+<p><strong>High / P1</strong> — Without budgets, homepage content tends
+to grow back after optimization.</p>
+<p><strong>Evidence / rationale:</strong> Previous baseline is already
+large and current structure remains similar.</p>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Define budgets for DOM nodes, document KB, JS KB, image KB,
+third-party KB, request count and Core Web Vitals.</p></li>
+<li><p>Run Lighthouse CI or equivalent on
+homepage/category/product/cart/checkout.</p></li>
+<li><p>Block release or require approval when budgets regress.</p></li>
+</ul>
+<p>F10 — Core Web Vitals need field-data validation</p>
+<p><strong>Medium / P2</strong> — The structural issues strongly suggest
+risk to LCP/INP, but the final acceptance decision should use real-user
+field data plus repeatable lab tests.</p>
+<p><strong>Evidence / rationale:</strong> No stable current CrUX/PSI
+result was available in this audit.</p>
+<p><strong>Recommended fix:</strong></p>
+<ul>
+<li><p>Capture PSI/CrUX at baseline.</p></li>
+<li><p>Instrument web-vitals RUM by page type/device/network where
+feasible.</p></li>
+<li><p>Use 75th-percentile targets: LCP &lt;=2.5s, INP &lt;=200ms, CLS
+&lt;=0.1.</p></li>
+<li><p>Compare 28-day field trend after release.</p></li>
+</ul>
+<h1 id="root-cause-model">6. Root-Cause Model</h1>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Layer</strong></th>
+<th><strong>Current issue</strong></th>
+<th><strong>Effect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Content architecture</td>
+<td>Homepage includes too many product sets</td>
+<td>Large HTML and product link count</td>
+</tr>
+<tr class="even">
+<td>Rendering architecture</td>
+<td>Inactive tabs exist in DOM</td>
+<td>Parsing/style/layout cost paid even when hidden</td>
+</tr>
+<tr class="odd">
+<td>Component markup</td>
+<td>Repeated controls/forms per product</td>
+<td>DOM depth and event initialization grow with card count</td>
+</tr>
+<tr class="even">
+<td>Frontend assets</td>
+<td>Magento modules + custom/theme JS can load broadly</td>
+<td>Main-thread/network cost</td>
+</tr>
+<tr class="odd">
+<td>Third-party</td>
+<td>Potential duplicate GTM + marketing scripts</td>
+<td>Additional requests and main-thread work</td>
+</tr>
+<tr class="even">
+<td>Delivery</td>
+<td>Caching/CDN state not validated</td>
+<td>Potential server/TTFB and repeat-visit inefficiency</td>
+</tr>
+<tr class="odd">
+<td>Governance</td>
+<td>No visible performance budget</td>
+<td>Regression likely after future merchandising changes</td>
+</tr>
+</tbody>
+</table>
+<p>The most important sequencing decision is to fix the top three layers
+first. Optimizing images, CDN, or minification while continuing to send
+thousands of unnecessary DOM nodes will improve symptoms but will not
+remove the main structural bottleneck.</p>
+<h1 id="how-to-fix-implementation-guide">7. How-to-Fix: Implementation
+Guide</h1>
+<h2 id="rebuild-homepage-tab-rendering-p0">7.1 Rebuild homepage tab
+rendering (P0)</h2>
+<p>Desired behavior: server-render only the active/default tab and a
+small initial product set. Other tabs should be data placeholders until
+requested.</p>
+<ol type="1">
+<li><p>Identify every homepage block that renders products by
+model/year.</p></li>
+<li><p>Change the Magento block/template/view-model so the initial
+response contains only the active year and a limited number of
+products.</p></li>
+<li><p>Expose a lightweight endpoint or GraphQL/REST query that returns
+the requested model/year product set. Prefer JSON plus a small reusable
+client template, or a server-rendered fragment if that fits the existing
+theme.</p></li>
+<li><p>On tab click, fetch only that tab's products, insert them into
+the tab panel, then cache the response in memory/browser where
+appropriate.</p></li>
+<li><p>Use an AbortController/request guard so rapid tab switching does
+not stack duplicate requests.</p></li>
+<li><p>Optionally prefetch only the next likely tab using
+requestIdleCallback or near-viewport logic after the main content is
+interactive.</p></li>
+<li><p>Test add-to-cart, pricing, stock, configurable products,
+form_key/CSRF, analytics and accessibility after conversion.</p></li>
+</ol>
+<h3 id="acceptance-criteria">Acceptance criteria</h3>
+<ul>
+<li><p>Inactive tabs contribute zero product-card nodes at initial
+load.</p></li>
+<li><p>Switching tabs loads content on demand with clear loading/error
+states.</p></li>
+<li><p>Repeated clicks do not refetch already loaded tabs unless cache
+invalidation requires it.</p></li>
+<li><p>Keyboard/tab semantics remain accessible
+(role=tab/tablist/tabpanel or equivalent).</p></li>
+</ul>
+<h2 id="reduce-homepage-product-density-p0">7.2 Reduce homepage product
+density (P0)</h2>
+<ul>
+<li><p>Limit each merchandising section to 8–12 initial cards.</p></li>
+<li><p>Move deep browsing to category/model pages.</p></li>
+<li><p>If business requires many sections, progressively reveal sections
+as they approach the viewport rather than rendering all at document
+start.</p></li>
+<li><p>Do not use CSS display:none as the primary performance strategy;
+hidden DOM is still DOM.</p></li>
+</ul>
+<h2 id="simplify-product-card-markup-and-add-to-cart-p1">7.3 Simplify
+product-card markup and add-to-cart (P1)</h2>
+<ul>
+<li><p>Audit the product-card DOM tree and remove decorative wrappers
+that do not provide layout/accessibility value.</p></li>
+<li><p>Use a single delegated click/input listener per product grid
+instead of binding handlers to hundreds of cards.</p></li>
+<li><p>Render quantity/configuration controls only when needed; keep
+simple-product cards minimal.</p></li>
+<li><p>Avoid duplicate IDs and unnecessary hidden inputs.</p></li>
+<li><p>Retain Magento security tokens and server-side
+validation.</p></li>
+</ul>
+<h2 id="magento-frontend-asset-optimization-p1">7.4 Magento frontend
+asset optimization (P1)</h2>
+<table>
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Action</strong></th>
+<th><strong>Recommendation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mode</td>
+<td>Run storefront in production mode for production environments.</td>
+</tr>
+<tr class="even">
+<td>HTML</td>
+<td>Enable/minify HTML output where supported and validate no extension
+conflicts.</td>
+</tr>
+<tr class="odd">
+<td>CSS</td>
+<td>Minify; remove unused theme CSS; consider critical CSS for
+above-the-fold content.</td>
+</tr>
+<tr class="even">
+<td>JS</td>
+<td>Minify and defer non-critical scripts.</td>
+</tr>
+<tr class="odd">
+<td>Bundling</td>
+<td>Use page-type/purpose-specific advanced bundling or a modern theme
+build strategy. Measure first load, not only request count.</td>
+</tr>
+<tr class="even">
+<td>Merging</td>
+<td>Do not rely on deprecated 'merge JS/CSS' as a performance solution;
+Adobe warns it can conflict with RequireJS and offers little/no benefit
+on HTTP/2.</td>
+</tr>
+<tr class="odd">
+<td>Static content</td>
+<td>Use proper static-content deployment and version/sign static
+files.</td>
+</tr>
+<tr class="even">
+<td>Source maps</td>
+<td>Disable production source-map delivery unless operationally
+required.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gtm-analytics-cleanup-p1">7.5 GTM / analytics cleanup (P1)</h2>
+<ol start="8" type="1">
+<li><p>Search Magento theme/layout XML/templates/CMS blocks/modules for
+GTM container snippets.</p></li>
+<li><p>Open GTM Preview / Tag Assistant and record all tags firing on
+one clean homepage load.</p></li>
+<li><p>Verify one canonical page_view event and one ecommerce event per
+user action.</p></li>
+<li><p>Remove old GA/UA/pixels and duplicate containers.</p></li>
+<li><p>Move non-critical marketing scripts behind consent, idle time or
+interaction where business/legal requirements permit.</p></li>
+<li><p>Retest performance with third-party domains blocked to quantify
+their real contribution.</p></li>
+</ol>
+<h2 id="image-strategy-p1">7.6 Image strategy (P1)</h2>
+<ul>
+<li><p>Generate correctly sized thumbnail variants at the Magento media
+layer; do not serve oversized originals into small cards.</p></li>
+<li><p>Use WebP/AVIF variants where the stack supports them.</p></li>
+<li><p>Set intrinsic dimensions/aspect-ratio to control CLS.</p></li>
+<li><p>Lazy-load below-the-fold images; eagerly load only above-the-fold
+assets.</p></li>
+<li><p>Identify the real LCP image and prioritize only that
+resource.</p></li>
+</ul>
+<h2 id="cache-cdn-infrastructure-validation-p1">7.7 Cache / CDN /
+infrastructure validation (P1)</h2>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Check</strong></th>
+<th><strong>How to validate</strong></th>
+<th><strong>Pass condition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Magento mode</td>
+<td>bin/magento deploy:mode:show</td>
+<td>production</td>
+</tr>
+<tr class="even">
+<td>Cache status</td>
+<td>bin/magento cache:status</td>
+<td>Required production caches enabled</td>
+</tr>
+<tr class="odd">
+<td>FPC / Varnish</td>
+<td>Response headers + Magento config + Varnish config</td>
+<td>Cache HIT on anonymous repeat view where applicable</td>
+</tr>
+<tr class="even">
+<td>Static assets</td>
+<td>Response Cache-Control headers</td>
+<td>Long-lived immutable/versioned caching</td>
+</tr>
+<tr class="odd">
+<td>Compression</td>
+<td>Network/headers</td>
+<td>Brotli or gzip for text assets</td>
+</tr>
+<tr class="even">
+<td>Protocol</td>
+<td>DevTools Network</td>
+<td>HTTP/2 or HTTP/3 where supported</td>
+</tr>
+<tr class="odd">
+<td>CDN</td>
+<td>DNS/headers/provider config</td>
+<td>Static/media served from CDN or edge cache</td>
+</tr>
+<tr class="even">
+<td>Origin TTFB</td>
+<td>Repeat cold/warm measurements</td>
+<td>Within project budget and stable under load</td>
+</tr>
+</tbody>
+</table>
+<h1 id="performance-measurement-plan">8. Performance Measurement
+Plan</h1>
+<p>Use the same test profile before and after every implementation
+phase. Test at least homepage, category, product detail, cart and
+checkout.</p>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Metric</strong></th>
+<th><strong>Why it matters</strong></th>
+<th><strong>Target / budget</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DOM elements</td>
+<td>Rendering/interactivity complexity</td>
+<td>Homepage ideally &lt;1,500–2,000; no hidden catalog explosion</td>
+</tr>
+<tr class="even">
+<td>Document transfer / resource size</td>
+<td>Initial network cost</td>
+<td>HTML &lt;300–500 KB where practical; trend materially below
+baseline</td>
+</tr>
+<tr class="odd">
+<td>Total requests</td>
+<td>Network overhead</td>
+<td>Set page-type budget after first clean baseline</td>
+</tr>
+<tr class="even">
+<td>JS transfer + main-thread time</td>
+<td>Interaction responsiveness</td>
+<td>Reduce unused/non-critical/third-party work</td>
+</tr>
+<tr class="odd">
+<td>LCP</td>
+<td>Loading experience</td>
+<td>&lt;=2.5s p75</td>
+</tr>
+<tr class="even">
+<td>INP</td>
+<td>Interaction responsiveness</td>
+<td>&lt;=200ms p75</td>
+</tr>
+<tr class="odd">
+<td>CLS</td>
+<td>Visual stability</td>
+<td>&lt;=0.1 p75</td>
+</tr>
+<tr class="even">
+<td>TTFB</td>
+<td>Origin/cache responsiveness</td>
+<td>Set region-specific target; compare cold vs cached</td>
+</tr>
+<tr class="odd">
+<td>Third-party blocking time</td>
+<td>Tag impact</td>
+<td>No unnecessary/duplicate vendor cost</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-lab-procedure">Recommended lab procedure</h2>
+<ol start="14" type="1">
+<li><p>Chrome Incognito or clean profile; clear storage between cold
+runs.</p></li>
+<li><p>Mobile emulation with network and CPU throttling; run at least
+3–5 times and use median.</p></li>
+<li><p>Capture Lighthouse JSON plus DevTools Performance and Network HAR
+for baseline.</p></li>
+<li><p>Record DOM node count, HTML bytes, total transfer, request count,
+LCP/INP proxy/TBT/CLS and third-party main-thread time.</p></li>
+<li><p>Repeat after each remediation phase under the same
+conditions.</p></li>
+<li><p>Use PageSpeed Insights/CrUX for field-data validation once enough
+real-user data accumulates.</p></li>
+</ol>
+<h1 id="prioritized-remediation-roadmap">9. Prioritized Remediation
+Roadmap</h1>
+<table>
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Phase</strong></th>
+<th><strong>Work</strong></th>
+<th><strong>Expected impact</strong></th>
+<th><strong>Definition of done</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P0 / Phase 1</td>
+<td>Lazy/on-demand tab data; cap homepage products; remove hidden
+product DOM</td>
+<td>Largest reduction in HTML/DOM/rendering cost</td>
+<td>Inactive tabs absent from initial DOM; document and node count
+materially reduced</td>
+</tr>
+<tr class="even">
+<td>P1 / Phase 2</td>
+<td>Simplify cards; image lazy-loading/resizing; GTM cleanup</td>
+<td>Lower main-thread/network/image cost</td>
+<td>No duplicate analytics firing; smaller card DOM; image requests
+viewport-aware</td>
+</tr>
+<tr class="odd">
+<td>P1 / Phase 3</td>
+<td>Magento production/minification/bundling; cache/CDN validation</td>
+<td>Improves asset delivery, TTFB and repeat loads</td>
+<td>Production config validated; FPC/static caching verified</td>
+</tr>
+<tr class="even">
+<td>P2 / Phase 4</td>
+<td>Performance budgets, Lighthouse CI/RUM/CrUX monitoring</td>
+<td>Prevents regression</td>
+<td>Automated checks and release thresholds active</td>
+</tr>
+</tbody>
+</table>
+<h1 id="suggested-engineering-tickets">10. Suggested Engineering
+Tickets</h1>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Ticket</strong></th>
+<th><strong>Scope</strong></th>
+<th><strong>Priority</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PERF-01</td>
+<td>Refactor homepage model/year tabs to on-demand loading</td>
+<td>P0</td>
+</tr>
+<tr class="even">
+<td>PERF-02</td>
+<td>Limit initial products per homepage section to 8–12</td>
+<td>P0</td>
+</tr>
+<tr class="odd">
+<td>PERF-03</td>
+<td>Remove inactive tab product markup from server response</td>
+<td>P0</td>
+</tr>
+<tr class="even">
+<td>PERF-04</td>
+<td>Simplify product-card markup and delegated event handling</td>
+<td>P1</td>
+</tr>
+<tr class="odd">
+<td>PERF-05</td>
+<td>Implement responsive/lazy product image strategy</td>
+<td>P1</td>
+</tr>
+<tr class="even">
+<td>PERF-06</td>
+<td>Audit and deduplicate GTM/analytics containers and tags</td>
+<td>P1</td>
+</tr>
+<tr class="odd">
+<td>PERF-07</td>
+<td>Validate Magento production mode, minification and advanced bundling
+strategy</td>
+<td>P1</td>
+</tr>
+<tr class="even">
+<td>PERF-08</td>
+<td>Validate Varnish/FPC, Redis, CDN, compression and cache headers</td>
+<td>P1</td>
+</tr>
+<tr class="odd">
+<td>PERF-09</td>
+<td>Create Lighthouse/DevTools performance baseline and budgets</td>
+<td>P1</td>
+</tr>
+<tr class="even">
+<td>PERF-10</td>
+<td>Add CI/regression performance gate and field monitoring</td>
+<td>P2</td>
+</tr>
+</tbody>
+</table>
+<h1 id="expected-improvement">11. Expected Improvement</h1>
+<p>Exact gains must be measured after implementation, but the structural
+fixes should produce the largest improvement because they remove work
+rather than merely compress it. The expected order of benefit is:</p>
+<ol start="20" type="1">
+<li><p>Remove hidden/inactive catalog DOM and reduce product
+density.</p></li>
+<li><p>Reduce card markup and image/network load.</p></li>
+<li><p>Clean third-party scripts.</p></li>
+<li><p>Optimize Magento JS/CSS and production caching.</p></li>
+<li><p>Enforce budgets so performance remains stable as merchandising
+content grows.</p></li>
+</ol>
+<p>A successful Phase 1 should be visibly reflected in a sharply smaller
+initial HTML document and DOM count even before any CDN or JavaScript
+tuning. That is the most useful proof that the root cause has actually
+been addressed.</p>
+<h1 id="acceptance-checklist">12. Acceptance Checklist</h1>
+<p><strong>☐</strong> Initial homepage does not contain product cards
+for inactive model/year tabs.</p>
+<p><strong>☐</strong> Initial visible product count per section is
+bounded.</p>
+<p><strong>☐</strong> DOM count and HTML size are recorded and
+materially lower than previous baseline.</p>
+<p><strong>☐</strong> Homepage still supports add-to-cart, pricing,
+stock and configurable products correctly.</p>
+<p><strong>☐</strong> Tab switching is keyboard accessible and has
+loading/error behavior.</p>
+<p><strong>☐</strong> Below-the-fold product images are lazy-loaded and
+correctly sized.</p>
+<p><strong>☐</strong> LCP image is not lazy-loaded and is correctly
+prioritized.</p>
+<p><strong>☐</strong> GTM container initializes only as intended.</p>
+<p><strong>☐</strong> Pageview/ecommerce events do not duplicate.</p>
+<p><strong>☐</strong> Magento production mode and required caches are
+enabled.</p>
+<p><strong>☐</strong> FPC/Varnish behavior is validated.</p>
+<p><strong>☐</strong> Static assets have long-lived caching and
+compression.</p>
+<p><strong>☐</strong> Performance tests run on mobile throttle and
+multiple iterations.</p>
+<p><strong>☐</strong> Core Web Vitals targets are tracked with field
+data where available.</p>
+<p><strong>☐</strong> Performance budgets are included in release/UAT
+criteria.</p>
+<h1 id="references">13. References</h1>
+<p><strong>Megaparts homepage:</strong> https://www.megaparts.com/</p>
+<p><strong>BuiltWith – Magento 2 sites in Thailand (includes
+megaparts.com):</strong>
+https://trends.builtwith.com/websitelist/Magento-2/Thailand</p>
+<p><strong>Adobe Commerce – Performance Best Practices
+Overview:</strong>
+https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/overview</p>
+<p><strong>Adobe Commerce – Configuration Best Practices:</strong>
+https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/configuration</p>
+<p><strong>Adobe Commerce – Advanced JavaScript Bundling:</strong>
+https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/concepts/advanced-js-bundling</p>
+<p><strong>Adobe Commerce – Optimize CSS and JS resource files:</strong>
+https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/development/optimize-css-js-files</p>
+<p><strong>web.dev – How large DOM sizes affect interactivity:</strong>
+https://web.dev/articles/dom-size-and-interactivity</p>
+<p><strong>web.dev – Third-party JavaScript performance:</strong>
+https://web.dev/articles/third-party-javascript</p>
+<p><strong>Chrome for Developers – Reduce the impact of third-party
+code:</strong>
+https://developer.chrome.com/docs/lighthouse/performance/third-party-summary/</p>
+<p><strong>Chrome for Developers – Lighthouse:</strong>
+https://developer.chrome.com/docs/lighthouse</p>
+<p>Assessment note: findings labeled 'confirmed' are supported by
+current external page/crawl or technology detection.
+Infrastructure/runtime details labeled 'verify' require access to
+Magento, browser network traces, GTM workspace, server/CDN
+configuration, or APM.</p>
+<div class="footer-note">Assessment date: 25 August 2026 · Standalone HTML conversion of the technical assessment.</div></main></div></body>
+</html>
