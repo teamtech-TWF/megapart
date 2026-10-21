@@ -1,0 +1,157 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Megaparts — Final Performance Handoff</title>
+<style>
+:root{
+  --red:#f52222; --red-dark:#9a1111; --ink:#171717; --muted:#6b7280;
+  --line:#e5e7eb; --soft:#f7f7f8; --ok:#15803d; --warn:#b45309; --info:#1d4ed8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f3f4f6;line-height:1.5}
+.wrap{max-width:1180px;margin:auto;padding:24px}
+.hero{background:linear-gradient(180deg,#f52222 0%,#9a1111 100%);color:#fff;border-radius:20px;padding:34px 36px;box-shadow:0 14px 34px rgba(120,0,0,.18)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1{font-size:38px;line-height:1.08;margin:8px 0 10px}
+.hero p{font-size:17px;max-width:820px;margin:0;opacity:.93}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.meta span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 11px;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 5px 18px rgba(17,24,39,.05)}
+.c12{grid-column:span 12}.c7{grid-column:span 7}.c5{grid-column:span 5}.c6{grid-column:span 6}
+h2{font-size:22px;margin:0 0 14px} h3{margin:0 0 7px;font-size:15px}
+.kicker{display:inline-block;color:var(--red-dark);background:#fff1f1;border:1px solid #ffd6d6;border-radius:999px;font-weight:700;font-size:12px;padding:5px 9px;margin-bottom:10px}
+.verdict{display:flex;gap:14px;align-items:flex-start}
+.status{width:12px;height:12px;border-radius:50%;margin-top:5px;flex:none}.ok-dot{background:var(--ok)}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric{background:var(--soft);border:1px solid var(--line);border-radius:13px;padding:15px}
+.metric .big{font-size:27px;font-weight:800;letter-spacing:-.02em}.metric .small{color:var(--muted);font-size:12px}
+.delta{color:var(--ok);font-weight:700;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:#fff;background:#202124;padding:10px 11px}
+td{border-bottom:1px solid var(--line);padding:10px 11px;vertical-align:top}
+.badge{display:inline-block;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:700}
+.badge.ok{background:#ecfdf3;color:#166534}.badge.warn{background:#fff7ed;color:#9a3412}.badge.open{background:#eff6ff;color:#1d4ed8}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.block{background:linear-gradient(180deg,#fff 0%,#fafafa 100%);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:11px;padding:12px;font-size:12px;min-height:74px}
+.block b{display:block;margin-bottom:4px}
+ol,ul{margin:8px 0 0 20px;padding:0} li{margin:6px 0}
+.quote{background:#111827;color:#fff;border-radius:14px;padding:18px 20px;font-size:18px;font-weight:700}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}
+.check{display:flex;gap:9px;font-size:13px}.check:before{content:"✓";color:var(--ok);font-weight:800}
+.footer{color:var(--muted);font-size:11px;text-align:center;padding:20px 0 6px}
+@media(max-width:840px){
+  .c7,.c5,.c6{grid-column:span 12}.metric-grid{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}.checks{grid-template-columns:1fr}h1{font-size:30px}
+}
+@media print{body{background:#fff}.wrap{max-width:none;padding:0}.hero,.card{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="eyebrow">Final Technical Handoff</div>
+  <h1>MEGAPARTS.COM Performance Optimization</h1>
+  <p>Final status after structural optimization review, with concise implementation guidance for the remaining homepage work.</p>
+  <div class="meta">
+    <span>Final Handoff</span><span>21 October 2026</span><span>Magento 2</span><span>Homepage / Frontend Performance</span>
+  </div>
+</section>
+
+<div class="grid">
+<section class="card c7">
+  <div class="kicker">Final Verdict</div>
+  <h2>Major structural improvement completed</h2>
+  <div class="verdict">
+    <span class="status ok-dot"></span>
+    <div><h3>Original DOM problem has been materially reduced.</h3>
+    The site is no longer in the same state as the original baseline. The remaining work is focused on reducing repeated homepage markup, simplifying the browsing experience, validating tracking, and measuring real user performance.</div>
+  </div>
+  <div class="quote" style="margin-top:16px">The next phase should be refinement and validation — not another full technical rebuild.</div>
+</section>
+
+<section class="card c5">
+  <div class="kicker">Before → Latest Recheck</div>
+  <h2>Measured improvement</h2>
+  <div class="metric-grid">
+    <div class="metric"><div class="big">7,280+</div><div class="small">Previous DOM elements</div><div class="delta">→ 2,818 latest recheck</div></div>
+    <div class="metric"><div class="big">456</div><div class="small">Previous product links</div><div class="delta">→ 124 latest recheck</div></div>
+    <div class="metric"><div class="big">~2.3 MB</div><div class="small">Previous rendered HTML</div><div class="delta">→ ~934k chars observed</div></div>
+  </div>
+</section>
+
+<section class="card c12">
+  <div class="kicker">Current Status</div>
+  <h2>What is resolved vs. what remains</h2>
+  <table>
+    <thead><tr><th>Area</th><th>Final status</th><th>Handoff note</th></tr></thead>
+    <tbody>
+      <tr><td>DOM / initial page structure</td><td><span class="badge ok">Improved</span></td><td>Reduced significantly from the original baseline; continue toward a smaller homepage footprint.</td></tr>
+      <tr><td>Product link volume</td><td><span class="badge ok">Improved</span></td><td>Large reduction confirmed in latest recheck.</td></tr>
+      <tr><td>Tab / year behavior</td><td><span class="badge ok">Improved</span></td><td>Tested switching no longer creates the same runaway product-link growth seen originally.</td></tr>
+      <tr><td>Repeated product forms / inputs</td><td><span class="badge warn">Remaining</span></td><td>~70 cards, 63 forms, and 126 inputs still indicate avoidable repeated UI markup.</td></tr>
+      <tr><td>Hidden product content</td><td><span class="badge warn">Remaining</span></td><td>Some cards still exist beneath hidden ancestors and should be removed from the initial render where possible.</td></tr>
+      <tr><td>GTM / analytics</td><td><span class="badge open">Verify</span></td><td>Two distinct GTM containers were observed; event duplication must be confirmed in Tag Assistant / GTM Preview.</td></tr>
+      <tr><td>Core Web Vitals</td><td><span class="badge open">Verify</span></td><td>Final acceptance should be based on Lighthouse median tests plus field data (CrUX / RUM) where available.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="card c6">
+  <div class="kicker">Recommended Homepage Model</div>
+  <h2>Move from catalog-heavy to discovery-first</h2>
+  <p style="margin-top:0;color:var(--muted)">The homepage should help users find the right area quickly, while full catalog browsing remains on PLP/category pages.</p>
+  <div class="flow">
+    <div class="block"><b>1. Hero</b>Campaign / key message</div>
+    <div class="block"><b>2. Bike Selector</b>Model + year</div>
+    <div class="block"><b>3. Quick Categories</b>Core parts groups</div>
+    <div class="block"><b>4. Featured Products</b>6–8 visible cards</div>
+    <div class="block"><b>5. Promo / New</b>Focused merchandising</div>
+    <div class="block"><b>6. View All</b>Continue to PLP</div>
+  </div>
+</section>
+
+<section class="card c6">
+  <div class="kicker">Final Implementation Direction</div>
+  <h2>What Dev should do next</h2>
+  <ol>
+    <li>Keep initial homepage product sections intentionally small — approximately 6–8 cards per block.</li>
+    <li>Do not render full inactive product groups simply to hide them with CSS.</li>
+    <li>Reduce repeated form/input markup inside product cards; use delegated interactions where practical.</li>
+    <li>Use “View All” to move deeper browsing to existing PLP/category pages with pagination and filters.</li>
+    <li>Audit GTM containers and confirm each page_view / ecommerce event fires once.</li>
+    <li>Run repeatable Lighthouse tests and track field Core Web Vitals after deployment.</li>
+  </ol>
+</section>
+
+<section class="card c12">
+  <div class="kicker">Acceptance Criteria</div>
+  <h2>Final sign-off checklist</h2>
+  <div class="checks">
+    <div class="check">Homepage DOM remains materially below the original 7,280+ baseline.</div>
+    <div class="check">Inactive product groups do not unnecessarily populate the initial DOM.</div>
+    <div class="check">Homepage product blocks are capped and use “View All” for deeper browsing.</div>
+    <div class="check">Add-to-cart, price, stock, and product interactions remain correct.</div>
+    <div class="check">GTM / analytics events are confirmed non-duplicated.</div>
+    <div class="check">Images below the fold use appropriate lazy loading and dimensions.</div>
+    <div class="check">Mobile Lighthouse is tested across multiple runs using a consistent profile.</div>
+    <div class="check">LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1 are monitored at the 75th percentile where field data is available.</div>
+  </div>
+</section>
+
+<section class="card c12">
+  <div class="kicker">Final Recommendation</div>
+  <h2>Handoff conclusion</h2>
+  <p style="font-size:16px;margin-bottom:0">
+    The original structural performance issue has been substantially improved. The recommended final direction is to keep the current optimization gains, simplify the homepage into reusable discovery-focused building blocks, reduce remaining repeated markup, and move the project into measurement and regression-control mode.
+  </p>
+</section>
+</div>
+
+<div class="footer">MEGAPARTS.COM — Final Performance Handoff · Prepared for technical implementation and client sign-off</div>
+</div>
+</body>
+</html>
